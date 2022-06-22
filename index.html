@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend Mentor | Interactive rating component</title>
+    <!--FAV ICON-->
+    <link rel="icon" href="./assets/images/favicon-32x32.png" sizes="32x32" type="image/png">
+    <!--GOOGLE FONTS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap">
+    <!--ANIMATE.CSS-->
+    <link rel="stylesheet" href="./libs/animate.min.css">
+    <!--CSS-->
+    <link rel="stylesheet" href="./css/styles.css">
+  </head>
+
+  <body>
+
+    <header>
+      <!--TITLE OF THE PAGE-->
+      <h1>Interactive rating component</h1>
+    </header>
+
+    <main>
+      <!--RATING CARD-->
+      <article class="card">
+        <!--RATING STATE-->
+        <div id="rating-state" class="p-[2.4rem] pb-[3.4rem] md:p-[3.2rem]">
+          <div class="w-[4.8rem] h-[4.8rem] bg-blue-100 flex justify-center items-center rounded-full">
+            <img src="./assets/images/icon-star.svg" alt="" aria-hidden="true">
+          </div>
+          <h2 class="mt-[1.6rem] md:mt-[3rem]">How did we do?</h2>
+          <p>
+            Please let us know how we did with your support request. All feedback is appreciated 
+            to help us improve our offering!
+          </p>
+          <form id="form">
+            <div class="my-[2.4rem] md:mb-[3.2rem] flex justify-between">
+              <div class="radio-rating" tabindex="0">
+                <input type="radio" name="rating" id="rating-choice-1" class="sr-only rating-choices" value="1">
+                <label for="rating-choice-1">1</label>
+              </div>
+
+              <div class="radio-rating" tabindex="0">
+                <input type="radio" name="rating" id="rating-choice-2" class="sr-only rating-choices" value="2">
+                <label for="rating-choice-2">2</label>
+              </div>
+
+              <div class="radio-rating" tabindex="0">
+                <input type="radio" name="rating" id="rating-choice-3" class="sr-only rating-choices" value="3">
+                <label for="rating-choice-3">3</label>
+              </div>
+
+              <div class="radio-rating" tabindex="0">
+                <input type="radio" name="rating" id="rating-choice-4" class="sr-only rating-choices" value="4">
+                <label for="rating-choice-4">4</label>
+              </div>
+
+              <div class="radio-rating" tabindex="0">
+                <input type="radio" name="rating" id="rating-choice-5" class="sr-only rating-choices" value="5">
+                <label for="rating-choice-5">5</label>
+              </div>
+            </div>
+
+            <button type="submit" class="button">Submit</button>
+          </form>
+        </div>
+
+        <!--THANK YOU STATE-->
+        <div id="thank-you-state" class="hidden flex flex-col items-center py-[3.5rem] md:py-[4.5rem] px-[2.4rem] md:px-[3.2rem]">
+          <img src="./assets/images/illustration-thank-you.svg" alt="" aria-hidden="true">
+          <p class="result-rating">
+            You selected <span id="number-rating">1</span> out of 5
+          </p>
+          <h2>Thank you!</h2>
+          <p class="text-center">
+            We appreciate you taking the time to give a rating. If you ever need more support, 
+            don’t hesitate to get in touch!
+          </p>
+        </div>
+
+      </article>
+
+    </main>
+
+    <!--JAVASCRIPT-->
+    <script src="./js/script.js" type="module"></script>
+
+  </body>
+
+</html>

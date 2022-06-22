@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply text-base;
+  }
+
+  body {
+    width: 100vw;
+    height: 100vh;
+    background-color: theme("colors.blue.200");
+    @apply flex justify-center items-center;
+  }
+
+  header {
+    @apply fixed top-20 left-12 hidden;
+  }
+
+  h1 {
+    color: theme("colors.white");
+    @apply text-5xl font-bold;
+  }
+
+  h2 {
+    color: theme("colors.white");
+    @apply text-2xl font-bold md:text-3xl;
+  }
+
+  p {
+    color: theme("colors.grey.100");
+    @apply text-xs md:text-sm font-medium;
+  }
+
+  label {
+    @apply block text-[1.4rem] md:text-[1.6rem] leading-[4.2rem] md:leading-[5.1rem] cursor-pointer;
+  }
+}
+
+@layer components {
+  .card {
+    width: 32.7rem;
+    height: 36rem;
+    background-color: theme("colors.black");
+    @apply md:w-[41.2rem] md:h-[41.6rem] rounded-2xl;
+  }
+
+  .radio-rating {
+    width: 4.2rem;
+    height: 4.2rem;
+    color: theme("colors.grey.200");
+    background-color: theme("colors.blue.100");
+    transition: all 0.25s linear;
+    @apply md:w-[5.1rem] md:h-[5.1rem] rounded-full text-center cursor-pointer hover:bg-orange hover:text-white focus:bg-orange focus:text-white;
+  }
+
+  .result-rating {
+    line-height: 3.2rem;
+    color: theme("colors.orange");
+    background-color: theme("colors.blue.100");
+    @apply px-[1.2rem] md:px-[2rem] my-[2.4rem] md:my-[3.2rem] rounded-full;
+  }
+
+  .button {
+    width: 100%;
+    height: 4.5rem;
+    color: theme("colors.white");
+    background-color: theme("colors.orange");
+    transition: all 0.25s linear;
+    @apply text-[1.4rem] md:text-[1.5rem] font-bold rounded-full hover:text-orange hover:bg-white focus:text-orange focus:bg-white;
+  }
+}
